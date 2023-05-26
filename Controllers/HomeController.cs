@@ -26,9 +26,11 @@ namespace Potafolio.Controllers
         }
 
        
-        public IActionResult Privacy()
+        public IActionResult Proyectos()
         {
-            return View();
+            var proyectos = repositorioProyectos.ObtenerProyectos();
+
+            return View(proyectos);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
